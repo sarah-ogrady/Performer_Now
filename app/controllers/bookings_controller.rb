@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @performer = Performer.find(params[:performer_id])
-    @booking.performer = performer
+    @booking.performer = @performer
     @booking.user = current_user
     @booking.total_price = performer.hourly_rate * @booking.total_hours
     if @booking.save
