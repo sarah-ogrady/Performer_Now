@@ -1,0 +1,8 @@
+<h1>Index Performers</h1>
+
+<% @performers.each do |performer| %>
+  <%= link_to "#{performer.first_name}, #{performer.last_name}, #{performer.job_title}", performer_path(performer) %>
+
+<% end %>
+
+

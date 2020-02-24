@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "deleting"
+Performer.destroy_all
+
+Performer.create(first_name: "Graham", last_name: "Hill", job_title: "Fire Performer")
+Performer.create(first_name: "Kate", last_name: "Lansdale", job_title: "Wedding Singer")
+Performer.create(first_name: "Zac", last_name: "Price", job_title: "Actor")
+puts "done"
