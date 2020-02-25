@@ -1,6 +1,7 @@
-<h1 style="text-align: center;">Performers</h1>
+
 
 <div class="container">
+  <h1 style="text-align: center;">Performers</h1>
   <div class="cards">
     <% @performers.each do |performer| %>
       <%= link_to(performer_path(performer), class: "card-links") do %>
