@@ -11,7 +11,7 @@ Performer.destroy_all
 
 User.create email: "test@test.com", password: "123456"
 
-Performer.create(first_name: "Graham", last_name: "Hill", job_title: "Fire Performer")
-Performer.create(first_name: "Kate", last_name: "Lansdale", job_title: "Wedding Singer")
-Performer.create(first_name: "Zac", last_name: "Price", job_title: "Actor")
+Performer.create(first_name: "Graham", last_name: "Hill", job_title: "Fire Performer", hourly_rate: 50)
+Performer.create(first_name: "Kate", last_name: "Lansdale", job_title: "Wedding Singer", hourly_rate: 100)
+Performer.create(first_name: "Zac", last_name: "Price", job_title: "Actor", hourly_rate: 150)
 puts "done"
