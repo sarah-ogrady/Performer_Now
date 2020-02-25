@@ -6,6 +6,7 @@
   background-size: cover;
   background-position: center;
   min-height: calc(100vh - 56px);
+  padding-top: 20vh;
 }
 
 .home-container h1 {
@@ -16,7 +17,7 @@
 
 .form_home {
   border-radius: 5px;
-  background-color: grey;
+  background-color: rgba(252, 252, 252, 0.4);
   width:500px;
   margin-bottom: 100px;
   margin:100px ;
@@ -27,11 +28,12 @@
   padding-right: 20px;
   padding-left: 20px;
   margin-top: 100px;
-  box-shadow: 2px 3px 3px darkgrey;
+  color: white;
 }
 
 .form_home h2 {
-  font-family: 'Kaushan Script', ;
+  font-family: 'Raleway', ;
+  color: white !important;
 }
 
 
