@@ -6,17 +6,12 @@
     <span id="banner-typed-text"></span>
     </p>
   </div>
-
-
   <div class="form_home">
-    <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
     <h2 style="color: white;">Search for your Artist</h2>
-    <%= f.input :job_title %>
-    <%= f.input :location %>
-    <%= f.submit "Search", class:"btn btn-outline-light"  %>
+    <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
+      <%= f.input :job_title %>
+      <%= f.input :location %>
+      <%= f.submit "Search", class:"btn btn-outline-light"  %>
+    <% end %>
   </div>
-
-  <% end %>
-
-
 </div>

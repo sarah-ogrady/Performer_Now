@@ -1,1 +1,78 @@
-<%= @performer.first_name %>
+<br>
+<h1 style="text-align: center;"> <%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
+
+<h2 style="text-align: center;"><%= @performer.job_title %></h2>
+<br>
+
+<div class="container">
+  <div class="row underline align-items-center">
+    <div class="col-lg-4">
+      <img style="width: 100%;" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    </div>
+    <div class="col-lg-8">
+      <p><strong><%= @performer.first_name %></strong> is first rate performer who has many years of experience. this performer has performed all over the
+      the wrold with many different and exciting shows. At the click of a button this performer could be at your event entertaining the
+      masses. Please book now, don't delay get the right performer for your event. </p>
+    </div>
+  </div>
+</div>
+
+<br>
+<h2 style="text-align: center;">CV</h2>
+<br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Type of Job</th>
+            <th scope="col">role</th>
+            <th scope="col">event</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Theatre Tour</td>
+            <td>Actor</td>
+            <td>Outdoor Festival</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Wedding Singer</td>
+            <td>Singer</td>
+            <td>Wedding</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Theatre</td>
+            <td>Actor</td>
+            <td>Christmas Pantomine</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Theatre</td>
+            <td>Actor</td>
+            <td>Summer Show</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-4">
+       <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
+        <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
+         <%= f.input :total_price %>
+          <%= f.input :date, html5: true %>
+          <%= f.submit class: "submit-booking"%>
+       <% end %>
+     </div>
+  </div>
+</div>
+
+
+<br>
+<p class="back-button"><%= link_to "------ View More Performers ------", performers_path %></p>
