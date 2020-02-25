@@ -1,17 +1,30 @@
 
 <div class="home-container">
-  <div class="banner-text">
-    <p class="bold">The place for</p>
-    <p>
-    <span id="banner-typed-text"></span>
-    </p>
-  </div>
-  <div class="form_home">
-    <h2 style="color: white;">Search for your Artist</h2>
-    <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
-      <%= f.input :job_title %>
-      <%= f.input :location %>
-      <%= f.submit "Search", class:"btn btn-outline-light"  %>
-    <% end %>
+  <div class="row">
+    <div class="col-xs-0 col-md-6 col-lg-6">
+
+    </div>
+
+    <div class="col-xs-12 col-md-6 col-lg-6">
+
+      <div class="banner-text">
+        <p class="bold">The place for</p>
+        <p>
+        <span id="banner-typed-text"></span>
+        </p>
+      </div>
+
+
+      <div class="form_home d-flex justify-content-center m-lg-5">
+        <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
+          <h2 style="color: white;">Search for your Artist</h2>
+          <%= f.input :job_title %>
+          <%= f.input :location %>
+          <%= f.submit "Search", class:"btn btn-outline-light"  %>
+        <% end %>
+      </div>
+
+
+    </div>
   </div>
 </div>
