@@ -1,8 +1,19 @@
 <h1>Index Performers</h1>
 
-<% @performers.each do |performer| %>
-  <%= link_to "#{performer.first_name}, #{performer.last_name}, #{performer.job_title}", performer_path(performer) %>
-
-<% end %>
-
-
+<div class="cards">
+  <% @performers.each do |performer| %>
+    <%= link_to(performer_path(performer), class: "card-links") do %>
+      <div class="card-performer">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-performer-infos">
+          <div>
+            <h2><%= "#{performer.first_name}" %></h2>
+            <p><%= "#{performer.job_title}" %></p>
+          </div>
+          <h2 class="card-trip-pricing">£<%= "#{performer.hourly_rate} /hour" %></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-performer-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
