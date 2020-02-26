@@ -15,7 +15,9 @@
     <% else %>
       <%= render partial: "shared/navbar_black" %>
     <% end %>
-    <%= yield %>
+    <div style="min-height: 100vh">
+      <%= yield %>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </body>

@@ -1,0 +1,26 @@
+.login_form_submit {
+  background-color: darkgrey;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  border-radius: 10px;
+}
+
+
+.login_form_submit:hover {
+  opacity: 0.6;
+}
+
+
+.login_form {
+  background-color: #f6eec7;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  width: 55%;
+  box-shadow: 2px 3px 3px lightgrey;
+}
+
+
