@@ -10,7 +10,11 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <% if controller_name == "pages" && action_name == "home" %>
+      <%= render partial: "shared/navbar_white" %>
+    <% else %>
+      <%= render partial: "shared/navbar_black" %>
+    <% end %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
