@@ -21,11 +21,49 @@
     padding-bottom: 30px;
     padding-top: 10px;
     color: white;
+    max-width: 450px;
+    margin: 0 auto !important;
 }
 
 .form_home h2 {
   font-family: 'Raleway', ;
   color: white !important;
+  text-align: center;
+  margin: auto;
 }
 
+// // Smallest device
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// // }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .form_home {
+//     margin: 2rem 8rem !important;
+//   }
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .form_home {
+//     margin: 2rem 12rem !important;
+//   }
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .form_home {
+//     width: fit-content;
+//   }
+// }
 
