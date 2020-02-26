@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[new create]
   end
   resources :bookings, only: [] do
+    member do
+      get :confirmation
+    end
     resources :reviews, only: %i[new create]
   end
 end
