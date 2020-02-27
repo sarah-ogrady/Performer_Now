@@ -1,19 +1,57 @@
-<div class="container">
-  <h2>My Bookings </h2>
-    <div class="booking-box">
-    <h3>Upcoming</h3>
-    <% @bookings.each do |booking| %>
-      <%= booking.date %>
-      <%= booking.total_hours %>
-      <%= booking.total_price %>
-      <% performer = booking.performer%>
-      <%= performer.job_title %>
-      <%= performer.first_name %>
-      <%= performer.avatar_url %>
-    <% end %>
 
-    <h3>Previous</h3>
-    <img src="" alt="">
+
+<div class="banner-index-bookings">
+  <div class="bookings-box">
+    <div class="flex-title-bookings">
+      <h2 class="booking-title">My Bookings </h2>
+      <%= link_to "Book another performer", performers_path, class: "btn btn-dark" %>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Current</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upcoming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Past</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="icon-with-text tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <i class="microphone fas fa-microphone-alt"></i>
+            <p>You have no current bookings</p>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="upcoming-bookings">
+              <% @bookings.each do |booking| %>
+                <% performer = booking.performer%>
+                <div class="booking-performer d-flex">
+                  <div class="d-flex">
+                    <img id="performer-photo" src= "<%= performer.image_url %>" />
+                    <%= link_to(performer_path(performer), class: " booking-performer-info link-to-performers") do %>
+                      <p id="performer-title"><%= performer.job_title %></p>
+                      <p><%= "#{performer.full_name}" %></p>
+                      <p><%= booking.date %></p>
+                      <p><%= booking.total_hours %> hours</p>
+                    <% end %>
+                  </div>
+                  <div class="price d-flex">
+                      <p id="price"><strong>£<%= booking.total_price %></strong></p></div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="icon-with-text tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <i class="microphone fas fa-microphone-alt"></i>
+            <p>You have no past bookings</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <%= link_to "Book another performer", root_path %>
 </div>
+
+
