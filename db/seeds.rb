@@ -38,7 +38,7 @@ Performer.create(first_name: "Gareth",
   hourly_rate: "10")
 Performer.create(first_name: "Charles",
   last_name: "Walker",
-  job_title: "Circus performer",
+  job_title: "Circus Performer",
   image_url: "https://images.unsplash.com/photo-1573747806413-2ddd2f5972e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
   avatar_url: "https://images.unsplash.com/photo-1542032465427-d583c71d3005?ixlib=rb-1.2.1&auto=format&fit=crop&w=1115&q=80",
   hourly_rate: "30")
