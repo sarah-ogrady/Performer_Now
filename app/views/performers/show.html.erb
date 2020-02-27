@@ -71,9 +71,12 @@
     <div class="col-lg-4">
       <h2 style="text-align: center; font-family: 'Montserrat';">Book Now</h2>
        <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
-        <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
-         <%= f.input :total_price %>
-          <%= f.input :date, html5: true %>
+          <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
+          <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
+            Total Price: £0
+          </div>
+          <%= f.input :time, as: :time, html5: true %>
+          <%= f.input :date, as: :date, html5: true %>
           <%= f.submit class: "submit-booking" %>
        <% end %>
        <br>
