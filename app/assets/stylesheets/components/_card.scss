@@ -2,18 +2,17 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-decoration: none;
+  font-family: "Montserrat" !important;
 }
 
 .card-links {
   text-decoration: none !important;
   color: black;
+  font-family: "Montserrat" !important;
   &:hover {
     color: black;
   }
-}
-
-.card-performer {
-  text-decoration: none;
 }
 
 .card-performer:hover {
@@ -31,14 +30,16 @@
 
 .card-performer h2 {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bold !important;
   margin: 0;
+  font-family: "Montserrat" !important;
 }
 
 .card-performer p {
-  font-size: 12px;
+  font-size: 14px;
   opacity: .7;
   margin: 0;
+  font-family: "Montserrat" !important;
 }
 
 
@@ -48,6 +49,13 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  font-family: "Montserrat" !important;
+  font-weight: bold !important;
+}
+
+.card-performer-pricing {
+  font-family: "Montserrat" !important;
+  font-weight: bold !important;
 }
 
 .card-performer-infos .card-performer-user {

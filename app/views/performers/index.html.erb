@@ -1,16 +1,26 @@
-<div class="banner">
-  <div class="text-container">
-    <h1>Your performance awaits...</h1>
-    <p>Choose from our wide range of performers to find the perfect fit for your event.</p>
-  </div>
-  
-  <div class="form_home d-flex justify-content-center m-lg-5">
-    <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
-      <%= f.input :job_title, collection: ["Fire Performer", "Actor", "Circus performer", "Singer", "All"], required: false %>
-      <%= f.submit "Search", class:"btn btn-primary"  %>
-    <% end %>
+<div class="banner-index">
+  <div class="row">
+
+    <div class="col-xs-0 col-md-6 col-lg-6">
+      <div class="text-container">
+        <h1>Your performance awaits...</h1>
+        <p>Choose from our wide range of performers to find the perfect fit for your event.</p>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-6 col-lg-6 justify-content-center mt-5">
+
+      <div class="form_index d-flex justify-content-center m-lg-5">
+        <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
+          <h2>Choose a performer type</h2>
+          <%= f.input_field :job_title, collection: ["Fire Performer", "Actor", "Circus performer", "Singer", "All"], required: false, input_html: { class: "form_input" } %>
+          <%= f.submit "Search", class:"btn btn-dark ml-3"  %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
+
 <div class="container">
   <div class="cards">
     <% @performers.each do |performer| %>
@@ -22,7 +32,7 @@
               <h2><%= "#{performer.first_name}" %></h2>
               <p><%= "#{performer.job_title}" %></p>
             </div>
-            <h2 class="card-trip-pricing">£<%= "#{performer.hourly_rate} /hour" %></h2>
+            <h2 class="card-performer-pricing">£<%= "#{performer.hourly_rate} /hour" %></h2>
             <img src=" <%= performer.avatar_url %> " class="card-performer-user avatar-bordered" />
           </div>
         </div>
