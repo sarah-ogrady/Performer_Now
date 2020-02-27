@@ -36,8 +36,6 @@ document.addEventListener('turbolinks:load', () => {
   price()
 });
 
-
-
 function price() {
   const price = document.querySelector(".price-target")
   if (price) {

@@ -17,7 +17,7 @@
       <div class="form_home d-flex justify-content-center m-lg-5">
         <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
           <h2>Choose a performer type</h2>
-          <%= f.input_field :job_title, collection: ["Fire Performer", "Actor", "Circus performer", "Singer", "All"], required: false, input_html: { class: "form_input" } %>
+          <%= f.input_field :job_title, collection: ["Fire Performer", "Actor", "Circus Performer", "Singer", "Pianist", "Juggler", "Wedding Singer", "All"], required: false, input_html: { class: "form_input" } %>
           <%= f.submit "Search", class:"btn btn-light ml-3"  %>
         <% end %>
       </div>
@@ -30,7 +30,7 @@
 <div class="container info-below-banner" style="text-align: center;">
   <div class="row">
     <div class="col-lg-4 three-icons">
-       <img src="https://lh3.googleusercontent.com/proxy/CTn9i50iOgaTQCsYNwj1jEE8-8EuVxFw6nEzEsskGfZfUtKfkcusRknrpB1ovKbVhWme1ejer6XVBEpayoytoAPdONnIfToa6Zey4cM-_NiiNh_0C8MVAh8TXguNSS9SzaKGSQ" alt="#" class="info-below-banner-image">
+       <img src="https://img.icons8.com/pastel-glyph/2x/search--v2.png" alt="#" class="info-below-banner-image">
        <h3>Search Artist</h3>
        <p>View from a wide varity of artists, in many different categories, with many different skills</p>
     </div>
@@ -65,7 +65,28 @@
     <br>
     <div class="row">
       <div class="col-lg-8">
-        <img src="https://images.unsplash.com/photo-1502206097369-e088c94dcf4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="#" style="width: 100%;box-shadow: 0 0 80px darkgrey;">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://images.unsplash.com/photo-1502206097369-e088c94dcf4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=800&q=80" class="d-block w-100" alt="..." style="box-shadow: 0 0 80px darkgrey;">
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1514997789755-30a35f9983e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=800&q=80" class="d-block w-100" alt="..." style="box-shadow: 0 0 80px darkgrey;">
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1524650359799-842906ca1c06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=800&q=80" class="d-block w-100" alt="..." style="box-shadow: 0 0 80px darkgrey;">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
         <img src="assets/logo_black.png" alt="#" style="width: 100%;">
       </div>
       <div class="col-lg-4">
@@ -85,13 +106,11 @@
   </div>
 </div>
 
+
 <div class="footer">
   <h3>Follow us</h3>
   <p>Click on the links below</p>
 </div>
-
-
-
 
 
 

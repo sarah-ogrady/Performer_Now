@@ -13,7 +13,7 @@
       <div class="form_index d-flex justify-content-center m-lg-5">
         <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
           <h2>Choose a performer type</h2>
-          <%= f.input_field :job_title, collection: ["Fire Performer", "Actor", "Circus performer", "Singer", "All"], required: false, input_html: { class: "form_input" } %>
+          <%= f.input_field :job_title, collection: ["Fire Performer", "Actor", "Circus Performer", "Singer", "Pianist", "Juggler", "Wedding Singer", "All"], required: false, input_html: { class: "form_input" } %>
           <%= f.submit "Search", class:"btn btn-dark ml-3"  %>
         <% end %>
       </div>
