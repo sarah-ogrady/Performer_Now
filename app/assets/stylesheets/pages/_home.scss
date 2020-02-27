@@ -16,7 +16,8 @@
 
 .form_home {
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: transparent;
+    // background-color: rgba(252, 252, 252, 0.4);
     padding-bottom: 30px;
     padding-top: 10px;
     max-width: 450px;
@@ -25,10 +26,10 @@
 }
 
 .form_home h2 {
-  color: rgb(72,72,72) !important;
+  color: white !important;
   font-size: 20px;
   font-family: 'Montserrat';
-  font-weight: bold;
+  // font-weight:;
   text-align: center;
   margin: auto;
   padding-top: 15px;
@@ -37,6 +38,36 @@
 
 .form_input {
   vertical-align: center;
+}
+
+.info-below-banner-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+
+.footer {
+  background-color: black;
+  height: 150px;
+}
+
+.footer h3 {
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+}
+
+.three-icons:hover {
+  transition: 0.5s;
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+    border-radius: 5px;
 }
 
 // // Smallest device

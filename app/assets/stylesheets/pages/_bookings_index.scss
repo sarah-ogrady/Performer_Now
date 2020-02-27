@@ -1,0 +1,99 @@
+.banner-index-bookings {
+  background-image: url('https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh);
+  padding: 150px 0;
+  font-family: 'Montserrat';
+}
+
+.bookings-box {
+  padding: 20px;
+  width: 700px;
+  margin: 0 auto;
+  background-color: rgba(252, 252, 252, 0.7);
+  border-radius: 6px;
+}
+
+.bookings-box > h2 {
+  align-text: center;
+}
+
+.nav-link {
+  color: black;
+  &:hover {
+    color: grey;
+  }
+}
+
+.flex-title-bookings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-performer {
+  background-color: white;
+  margin: 20px;
+  justify-content: space-between;
+  border-radius: 8px;
+  opacity: 0.9;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#performer-photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.booking-performer-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  p {
+    margin-bottom: 0px;
+    padding-left: 20px;
+    color: black;
+  &:hover {
+    color: grey;
+    }
+  }
+}
+
+#performer-title {
+  font-weight: bold;
+}
+
+.link-to-performers {
+  &:hover{
+  text-decoration: none;
+  }
+}
+
+.icon-with-text {
+  align-text: center;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.microphone {
+  font-size: 72px;
+  padding-bottom: 10px;
+}
+
+#price {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: 20px;
+}
+
+.price {
+  flex-direction: column;
+  justify-content: flex-end;
+}

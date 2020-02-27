@@ -1,12 +1,13 @@
-.banner {
+.banner-index {
   background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ), url(asset_path("index-background.jpg"));
   background-size: cover;
   background-position: center;
-  min-height: calc(100vh - 300px);
+  min-height: calc(100vh - 350px);
   padding: 150px 0;
+  display: flex;
 }
 
-.banner h1 {
+.banner-index h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -15,12 +16,20 @@
   font-family: "Montserrat";
 }
 
-.banner p {
+.banner-index p {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-family: "Montserrat";
+}
+
+.text-container {
+  padding-left: 19vw;
+  padding-right: 10vw;
+  h1 {
+    padding-bottom: 10px;
+  }
 }
 
 .cards {
@@ -33,6 +42,32 @@
 
 .container {
   width: 90%;
+}
+
+.form_index {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding-bottom: 30px;
+    padding-top: 10px;
+    max-width: 450px;
+    font-family: 'Montserrat';
+    margin-top: 5vh !important;
+    margin: auto !important;
+    display: inline-block;
+}
+
+.form_index h2 {
+  color: rgb(72,72,72) !important;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.form_input {
+  vertical-align: center;
 }
 
 // Smallest device
