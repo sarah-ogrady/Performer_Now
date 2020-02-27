@@ -12,19 +12,26 @@
   background-color: #e5e4cc;
   border-radius: 5px;
   box-shadow: 2px 3px 3px #e5e4cc;
+  display: flex;
+  flex-direction: column;
 }
 
 .submit-booking {
-  width: 100%;
-  background-color: lightgrey;
+  width: 75%;
   border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .back-button {
   text-align: center;
-  text-decoration: none;
-  color: black;
   font-weight: bolder;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 8px 15px;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
 .back-button:hover {
@@ -35,7 +42,7 @@
 
 .show_avatar {
   width: 500px;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: 3px 3px 3px lightgrey;
 }
 
@@ -44,4 +51,5 @@
   padding-top: 10px;
 }
 
-
+.price-target {
+  font-size: 25px;
