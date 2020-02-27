@@ -4,13 +4,15 @@
     <title>PerformerNow</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
     <% if controller_name == "pages" && action_name == "home" %>
+      <%= render partial: "shared/navbar_white" %>
+    <% elsif controller_name == "performers" && action_name == "index" %>
       <%= render partial: "shared/navbar_white" %>
     <% else %>
       <%= render partial: "shared/navbar_black" %>
