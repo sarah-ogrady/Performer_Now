@@ -15,7 +15,7 @@
 
 
 .login_form {
-  background-color: #f6eec7;
+  background-color: rgba(252, 252, 252, 0.4);
   border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 15px;
@@ -23,4 +23,17 @@
   box-shadow: 2px 3px 3px lightgrey;
 }
 
+.background-picture {
+  background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ), url("https://images.unsplash.com/photo-1509001142984-9c6df06bd35b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+}
 
+.behind_the_test h2 {
+  color: white;
+}
+
+.behind_the_test {
+  padding-top: 70px;
+}
