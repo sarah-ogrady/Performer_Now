@@ -10,24 +10,33 @@
 
 .home-container h1 {
   font-size: 100px;
+  font-weight: bold;
   color: white;
 }
 
 .form_home {
     border-radius: 5px;
-    background-color: rgba(252, 252, 252, 0.4);
+    background-color: rgba(255, 255, 255, 0.75);
     padding-bottom: 30px;
     padding-top: 10px;
-    color: white;
     max-width: 450px;
     margin: 0 auto !important;
+    font-family: 'Montserrat';
 }
 
 .form_home h2 {
-  font-family: 'Montserrat', ;
-  color: white !important;
+  color: rgb(72,72,72) !important;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  font-weight: bold;
   text-align: center;
   margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.form_input {
+  vertical-align: center;
 }
 
 // // Smallest device
