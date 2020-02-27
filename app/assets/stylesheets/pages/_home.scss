@@ -46,17 +46,18 @@
   padding-bottom: 10px;
 }
 
-.footer {
+.footer-homepage {
   background-color: black;
   height: 150px;
+  padding: 10px;
 }
 
-.footer h3 {
+.footer-homepage h3 {
   color: white;
   text-align: center;
 }
 
-.footer p {
+.footer-homepage p {
   color: white;
   text-align: center;
 }
@@ -70,6 +71,14 @@
 }
 
 
+.social-links-div {
+  text-align: center;
+}
+.social-link {
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+}
 
 // // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
