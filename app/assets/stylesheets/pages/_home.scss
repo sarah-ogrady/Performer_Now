@@ -39,6 +39,36 @@
   vertical-align: center;
 }
 
+.info-below-banner-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+
+.footer {
+  background-color: black;
+  height: 150px;
+}
+
+.footer h3 {
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+}
+
+.three-icons:hover {
+  transition: 0.5s;
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+    border-radius: 5px;
+}
+
 // // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
 //   .cards {
