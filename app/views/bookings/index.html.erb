@@ -27,23 +27,19 @@
           <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="upcoming-bookings">
               <% @bookings.each do |booking| %>
+                <% performer = booking.performer%>
                 <div class="booking-performer d-flex">
-                  <% performer = booking.performer%>
-                  <div class="so-long">
+                  <div class="d-flex">
                     <img id="performer-photo" src= "<%= performer.image_url %>" />
-                  </div>
-                  <%= link_to(performer_path(performer), class: "link-to-performers") do %>
-                    <div class="booking-performer-info">
+                    <%= link_to(performer_path(performer), class: " booking-performer-info link-to-performers") do %>
                       <p id="performer-title"><%= performer.job_title %></p>
-                      <p><%= "#{performer.first_name}" + " "  "#{performer.last_name}" %></p>
+                      <p><%= "#{performer.full_name}" %></p>
                       <p><%= booking.date %></p>
-                      <p><%= performer.description %></p>
-                        <p><%= booking.total_hours %> hours</p>
-                      <div class="hours-and-price">
-                        <p id="price"><strong>£<%= booking.total_price %></strong></p>
-                      </div>
-                    </div>
-                  <% end %>
+                      <p><%= booking.total_hours %> hours</p>
+                    <% end %>
+                  </div>
+                  <div class="price d-flex">
+                      <p id="price"><strong>£<%= booking.total_price %></strong></p></div>
                 </div>
               <% end %>
             </div>
