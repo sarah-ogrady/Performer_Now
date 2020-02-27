@@ -1,2 +1,19 @@
-<h2>All Bookings </h2>
-<%= link_to "Find another performer", root_path %>
+<div class="container">
+  <h2>My Bookings </h2>
+    <div class="booking-box">
+    <h3>Upcoming</h3>
+    <% @bookings.each do |booking| %>
+      <%= booking.date %>
+      <%= booking.total_hours %>
+      <%= booking.total_price %>
+      <% performer = booking.performer%>
+      <%= performer.job_title %>
+      <%= performer.first_name %>
+      <%= performer.avatar_url %>
+    <% end %>
+
+    <h3>Previous</h3>
+    <img src="" alt="">
+  </div>
+  <%= link_to "Book another performer", root_path %>
+</div>

@@ -1,7 +1,7 @@
 <br>
-<h1 style="text-align: center; font-family: 'Neuton'; font-size: 55px; padding-top: 50px;"> <%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
+<h1 style="text-align: center; font-family: 'Montserrat'; font-size: 55px; padding-top: 50px;"> <%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
 
-<h2 style="text-align: center; font-family: 'Neuton';"><%= @performer.job_title %></h2>
+<h2 style="text-align: center; font-family: 'Montserrat';"><%= @performer.job_title %></h2>
 <br>
 
 <div class="container">
@@ -24,7 +24,7 @@
 <div class="container underline">
   <div class="row">
     <div class="col-lg-8">
-      <h2 style="text-align: center; font-family: 'Neuton';">CV</h2>
+      <h2 style="text-align: center; font-family: 'Montserrat';">CV</h2>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -69,7 +69,7 @@
       </table>
     </div>
     <div class="col-lg-4">
-      <h2 style="text-align: center; font-family: 'Neuton';">Book Now</h2>
+      <h2 style="text-align: center; font-family: 'Montserrat';">Book Now</h2>
        <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
         <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
          <%= f.input :total_price %>
@@ -81,7 +81,7 @@
   </div>
 </div>
   <br>
-    <h2 style="text-align: center; font-family: 'Neuton'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
+    <h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
     <div class="show_position">
       <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
         <br>
