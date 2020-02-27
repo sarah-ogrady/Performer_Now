@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
     @performer = Performer.find(params[:performer_id])
     @booking.performer = @performer
     @booking.user = current_user
+    @booking.total_price = @booking.total_hours * @performer.hourly_rate
     if @booking.save
       redirect_to confirmation_booking_path(@booking)
     else

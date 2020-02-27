@@ -73,7 +73,7 @@
        <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
           <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
           <%= f.input :time, as: :time, html5: true %>
-          <%= f.input :date, as: :date, html5: true %>
+          <%= f.input :date, as: :date, html5: true, input_html: { value: Date.today } %>
           <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
             Total Price: £0
           </div>
