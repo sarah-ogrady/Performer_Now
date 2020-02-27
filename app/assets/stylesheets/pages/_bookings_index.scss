@@ -29,6 +29,9 @@
 .flex-title-bookings {
   display: flex;
   justify-content: space-between;
+  a {
+    padding-top: 10px;
+  }
 }
 
 .booking-performer {
