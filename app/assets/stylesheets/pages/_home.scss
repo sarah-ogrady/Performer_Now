@@ -47,17 +47,18 @@
   padding-bottom: 10px;
 }
 
-.footer {
+.footer-homepage {
   background-color: black;
   height: 150px;
+  padding: 10px;
 }
 
-.footer h3 {
+.footer-homepage h3 {
   color: white;
   text-align: center;
 }
 
-.footer p {
+.footer-homepage p {
   color: white;
   text-align: center;
 }
@@ -68,6 +69,15 @@
   box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
     -5px -5px 30px 15px rgba(0,0,0,0.22);
     border-radius: 5px;
+}
+
+.social-links-div {
+  text-align: center;
+}
+.social-link {
+  color: white;
+  padding: 10px;
+  font-size: 30px;
 }
 
 // // Smallest device
