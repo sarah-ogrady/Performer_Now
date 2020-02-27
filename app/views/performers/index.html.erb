@@ -1,10 +1,17 @@
-
-
+<div class="banner">
+  <div class="text-container">
+    <h1>Your performance awaits...</h1>
+    <p>Choose from our wide range of performers to find the perfect fit for your event.</p>
+  </div>
+  
+  <div class="form_home d-flex justify-content-center m-lg-5">
+    <%= simple_form_for :search, url: performers_path, method: :get do |f| %>
+      <%= f.input :job_title, collection: ["Fire Performer", "Actor", "Circus performer", "Singer", "All"], required: false %>
+      <%= f.submit "Search", class:"btn btn-primary"  %>
+    <% end %>
+  </div>
+</div>
 <div class="container">
-
-  <h1 style="text-align: center; font-family: 'Montserrat'; font-size: 70px; padding-top: 50px;">List of Performers</h1>
-  <br>
-  <br>
   <div class="cards">
     <% @performers.each do |performer| %>
       <%= link_to(performer_path(performer), class: "card-links") do %>
