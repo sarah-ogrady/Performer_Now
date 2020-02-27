@@ -25,10 +25,9 @@
 }
 
 .text-container {
-  padding-left: 10vw;
+  padding-left: 19vw;
   padding-right: 10vw;
   h1 {
-    padding-top: 8vh;
     padding-bottom: 10px;
   }
 }
@@ -52,7 +51,9 @@
     padding-top: 10px;
     max-width: 450px;
     font-family: 'Montserrat';
-    margin: auto;
+    margin-top: 5vh !important;
+    margin: auto !important;
+    display: inline-block;
 }
 
 .form_index h2 {
