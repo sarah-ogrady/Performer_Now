@@ -1,24 +1,18 @@
-.sign_up_account {
-  background-color: darkgrey;
-  width: 100%;
-  color: white;
-  font-size: 20px;
-  font-weight: bolder;
-  letter-spacing: 5px;
-  border-radius: 10px;
-}
-
-
-.sign_up_account:hover {
-  opacity: 0.6;
-}
-
-
 .sign_up_form {
- background-color: rgba(252, 252, 252, 0.4);
-  border-radius: 2px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
   padding-top: 10px;
   padding-bottom: 15px;
+  margin-top: 20px;
   width: 400px;
-  box-shadow: 2px 3px 5px darkgrey;
+  font-family: 'Montserrat';
+}
+
+.form-inputs {
+  font-weight: 500;
+  color: rgb(60,60,60) !important;
+}
+
+.text-muted {
+  color: rgb(60,60,60) !important;
 }
