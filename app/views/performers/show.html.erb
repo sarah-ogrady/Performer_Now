@@ -73,11 +73,11 @@
        <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
           <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
           <%= f.input :time, as: :time, html5: true %>
-          <%= f.input :date, as: :date, html5: true %>
+          <%= f.input :date, as: :date, html5: true, input_html: { value: Date.today } %>
           <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
             Total Price: £0
           </div>
-          <%= f.submit class: "submit-booking btn btn-primary" %>
+          <%= f.submit class: "submit-booking btn btn-dark" %>
        <% end %>
        <br>
      </div>
@@ -87,9 +87,9 @@
     <h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
     <div class="show_position">
       <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
-        <br>
     </div>
-    <p class="back-button"><%= link_to "View More Performers", performers_path %></p>
+    <br>
+    <p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 
 
 

@@ -4,7 +4,7 @@
   background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5) ), url("https://images.unsplash.com/photo-1547423753-bff7561e2956?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
   background-position: center;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - 100px);
   padding-top: 20vh;
 }
 
@@ -16,8 +16,7 @@
 
 .form_home {
     border-radius: 5px;
-    background-color: transparent;
-    // background-color: rgba(252, 252, 252, 0.4);
+    background-color: rgba(252, 252, 252, 0.3);
     padding-bottom: 30px;
     padding-top: 10px;
     max-width: 450px;
@@ -70,6 +69,7 @@
     -5px -5px 30px 15px rgba(0,0,0,0.22);
     border-radius: 5px;
 }
+
 
 .social-links-div {
   text-align: center;
