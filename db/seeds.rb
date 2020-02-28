@@ -133,8 +133,8 @@ Performer.create(first_name: "Sarah",
 Performer.create(first_name: "Conner",
   last_name: "Jones",
   job_title: "Wedding Singer",
-  image_url: "https://images.unsplash.com/photo-1439539698758-ba2680ecadb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-  avatar_url: "https://images.unsplash.com/photo-1535324492437-d8dea70a38a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80",
+  image_url: "https://images.unsplash.com/photo-1488787973741-19520a61248a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  avatar_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
   hourly_rate: "25",
   description: "Conner Studied Music at Thames valley University, after achiving his degree and his Level 8 in vocals, he travelled all over the UK
   singing at various differnt venues. after two years of this he specialised in Wedding Singing and developed an impressive portfolio.
