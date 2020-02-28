@@ -83,16 +83,29 @@
     </div>
   </div>
     <br>
-      <h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
-      <div class="show_position">
-        <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
-      </div>
-      <br>
-      <p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
+
+<div class="container">
+  <% if @last_booking %>
+    <%= simple_form_for([ @last_booking, @review ], remote: true) do |f| %>
+      <%= f.input :rating %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.button :submit %>
+    <% end %>
+  <% end %>
 </div>
 
+<br>
+<p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 
-
-
-
-
+<div class="container">
+  <% if @performer.reviews.any? %>
+    <% @performer.reviews.each do |review| %>
+      <h3><%= review.title %></h3>
+      <h4><%= review.rating %></h4>
+      <p><%= review.description %></p>
+    <% end %>
+  <% elsif @last_booking %>
+    Be the first to leave a review for <%= @performer.first_name %>
+  <% end %>
+</div>
