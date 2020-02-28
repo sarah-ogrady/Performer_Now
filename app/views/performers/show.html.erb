@@ -10,9 +10,9 @@
       <img style="width: 100%; box-shadow: 3px 3px 3px lightgrey; border-radius: 5px;" src=" <%= @performer.image_url %> " />
     </div>
     <div class="col-lg-8">
-      <p><strong><%= @performer.first_name %></strong> is first rate performer who has many years of experience. this performer has performed all over the
-      the wrold with many different and exciting shows. At the click of a button this performer could be at your event entertaining the
-      masses. Please book now, don't delay get the right performer for your event. </p>
+      <p><strong><%= @performer.first_name %></strong> is a first rate performer who has many years of experience. This performer has performed all over the
+      the world with many different and exciting shows. At the click of a button they could be at your event entertaining the
+      masses. Please book now, don't delay, get the right performer for your event. </p>
       <br>
       <p><strong>£<%= @performer.hourly_rate %> per hour</strong></p>
     </div>
@@ -77,19 +77,43 @@
           <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
             Total Price: £0
           </div>
-          <%= f.submit class: "submit-booking btn btn-dark" %>
-       <% end %>
-       <br>
+          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+            Book
+          </button>
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Congratulations!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h2>Your booking is confirmed.</h2>
+<!--                   <h3><%#= "On #{@booking.date} from #{@booking.time.hour}:#{@booking.time.min} to #{@booking.time.hour + @booking.total_hours}:#{@booking.time.min}" %></h3>
+ -->                </div>
+                <div class="modal-footer">
+                  <%= f.submit "My bookings", class: "submit-booking btn btn-dark", input_html: { data: { toggle: 'modal', target: '#exampleModal'}} %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <br>
      </div>
   </div>
 </div>
   <br>
-    <h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
-    <div class="show_position">
-      <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
-    </div>
-    <br>
-    <p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
+<h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
+<div class="show_position">
+  <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
+</div>
+<br>
+<p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 
 
 
