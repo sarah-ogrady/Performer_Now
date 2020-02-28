@@ -20,11 +20,11 @@
 
   <br>
 
-  <div class="container underline">
+  <div class="container">
     <div class="row">
       <div class="col-lg-8">
         <h2 style="text-align: center; font-family: 'Montserrat';">CV</h2>
-        <table class="table table-hover">
+        <table class="table table-hover cv-table">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -102,37 +102,43 @@
       <br>
      </div>
   </div>
-</div>
   <br>
-<h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
-<div class="show_position">
-  <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
-</div>
-<br>
-<p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
+  <h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
+  <div class="show_position">
+    <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
+  </div>
+  <br>
 
-<div class="container">
-  <% if @last_booking %>
-    <%= simple_form_for([ @last_booking, @review ], remote: true) do |f| %>
-      <%= f.input :rating %>
-      <%= f.input :title %>
-      <%= f.input :description %>
-      <%= f.button :submit %>
+  <div class="review-container">
+    <% if @last_booking %>
+      <%= simple_form_for([ @last_booking, @review ], remote: true) do |f| %>
+        <%= f.input :rating %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.submit "Add Review", class: "btn btn-dark" %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
-<br>
-<p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
+  <br>
 
-<div class="container">
-  <% if @performer.reviews.any? %>
-    <% @performer.reviews.each do |review| %>
-      <h3><%= review.title %></h3>
-      <h4><%= review.rating %></h4>
-      <p><%= review.description %></p>
+  <div class="container">
+    <% if @performer.reviews.any? %>
+      <% @performer.reviews.each do |review| %>
+        <div class="review">
+          <h3><%= review.title %></h3>
+          <% review.rating.to_i.times do  %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <p><%= review.description %></p>
+        </div>
+      <% end %>
+    <% elsif @last_booking %>
+      <div class="review">
+        Be the first to leave a review for <%= @performer.first_name %>
+      </div>
     <% end %>
-  <% elsif @last_booking %>
-    Be the first to leave a review for <%= @performer.first_name %>
-  <% end %>
+  </div>
+
+  <p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 </div>
