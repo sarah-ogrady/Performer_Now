@@ -62,18 +62,21 @@
   text-align: center;
 }
 
-.three-icons:hover {
-  transition: 0.5s;
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
-    border-radius: 5px;
+.three-icons {
+  transition: top ease 0.3s;
+  position: relative;
+  top: 0;
 }
 
+.three-icons:hover {
+  transition: 0.3s;
+  top: -10px;
+}
 
 .social-links-div {
   text-align: center;
 }
+
 .social-link {
   color: white;
   padding: 10px;
