@@ -15,5 +15,7 @@ class PerformersController < ApplicationController
   def show
     @performer = Performer.find(params[:id])
     @booking = Booking.new
+    @review = Review.new
+    @last_booking = current_user.bookings.where(performer: @performer).first
   end
 end
