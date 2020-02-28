@@ -11,6 +11,9 @@ class PerformersController < ApplicationController
       # end
   end
 
+  def confirmation
+    @booking = Booking.find(params[:id])
+  end
 
   def show
     @performer = Performer.find(params[:id])

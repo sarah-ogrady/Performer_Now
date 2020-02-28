@@ -67,22 +67,53 @@
           </tbody>
         </table>
       </div>
-      <div class="col-lg-4">
-        <h2 style="text-align: center; font-family: 'Montserrat';">Book Now</h2>
-         <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
-            <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
-            <%= f.input :time, as: :time, html5: true %>
-            <%= f.input :date, as: :date, html5: true, input_html: { value: Date.today } %>
-            <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
-              Total Price: £0
+
+    <div class="col-lg-4">
+      <h2 style="text-align: center; font-family: 'Montserrat';">Book Now</h2>
+       <%= simple_form_for [@performer, @booking], html: { class: 'form-class' }, remote: true do |f| %>
+          <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
+          <%= f.input :time, as: :time, html5: true %>
+          <%= f.input :date, as: :date, html5: true, input_html: { value: Date.today } %>
+          <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
+            Total Price: £0
+          </div>
+          <%= f.submit "Book", class: "submit-booking btn btn-dark", 'data-toggle' => 'modal', 'data-target' => '#exampleModal' %>
+          <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+            Book
+          </button>
+ -->
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Congratulations!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="modal-body" id="IDK">
+                  <h2>Your booking is confirmed.</h2>
+<!--                   <h3><%#= "On #{@booking.date} from #{@booking.time.hour}:#{@booking.time.min} to #{@booking.time.hour + @booking.total_hours}:#{@booking.time.min}" %></h3>
+ -->                </div>
+                <div class="modal-footer">
+                <% end %>
+              </div>
             </div>
-            <%= f.submit class: "submit-booking btn btn-dark" %>
-         <% end %>
-         <br>
-       </div>
-    </div>
+          </div>
+        </div>
+      <br>
+     </div>
   </div>
-    <br>
+</div>
+  <br>
+<h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
+<div class="show_position">
+  <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
+</div>
+<br>
+<p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 
 <div class="container">
   <% if @last_booking %>

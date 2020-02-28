@@ -8,21 +8,15 @@
       <div class="col-12">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
-           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Current</a>
+           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Upcoming</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upcoming</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Past</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Past</a>
           </li>
         </ul>
+
         <div class="tab-content" id="myTabContent">
-          <div class="icon-with-text tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <i class="microphone fas fa-microphone-alt"></i>
-            <p>You have no current bookings</p>
-          </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="upcoming-bookings">
               <% @bookings.each do |booking| %>
                 <% performer = booking.performer%>
@@ -30,19 +24,19 @@
                   <div class="d-flex">
                     <img id="performer-photo" src= "<%= performer.image_url %>" />
                     <%= link_to(performer_path(performer), class: " booking-performer-info link-to-performers") do %>
-                      <p id="performer-title"><%= performer.job_title %></p>
-                      <p><%= "#{performer.full_name}" %></p>
-                      <p><%= booking.date %></p>
-                      <p><%= booking.total_hours %> hours</p>
+                    <p id="performer-title"><%= performer.job_title %></p>
+                    <p><%= "#{performer.full_name}" %></p>
+                    <p><%= booking.date %></p>
+                    <p><%= booking.total_hours %> hours</p>
                     <% end %>
                   </div>
                   <div class="price d-flex">
-                      <p id="price"><strong>£<%= booking.total_price %></strong></p></div>
-                </div>
-              <% end %>
+                    <p id="price"><strong>£<%= booking.total_price %></strong></p></div>
+                  </div>
+                <% end %>
+              </div>
             </div>
-          </div>
-          <div class="icon-with-text tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          <div class="icon-with-text tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <i class="microphone fas fa-microphone-alt"></i>
             <p>You have no past bookings</p>
           </div>
