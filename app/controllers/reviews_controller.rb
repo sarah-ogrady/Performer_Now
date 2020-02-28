@@ -14,8 +14,8 @@ class ReviewsController < ApplicationController
     # @review.performer = @performer
     @review.user = current_user
     if @review.save
-      # redirect_to performer_path(@booking.performer)
-      redirect_back(fallback_location: root_path)
+      redirect_to performer_path(@booking.performer, anchor: "new_review")
+      # redirect_back(fallback_location: root_path)
     else
       render 'performers/show'
     end

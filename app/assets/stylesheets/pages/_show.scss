@@ -1,17 +1,44 @@
-.performers-container {
-  margin-top: 35px;
+.banner-performers {
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 450px);
+  padding: 150px 0;
+  display: flex;
+  position: relative;
+  text-align: center;
 }
 
-.underline {
-  border-bottom: 3px solid black;
-  padding-bottom: 10px;
+.performers-banner-contents h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+  font-size: 50px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.performers-banner-contents h2 {
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+  font-family: "Montserrat";
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.performers-banner-contents {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-class {
   padding: 10px 10px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px lightgrey;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
 }
@@ -58,4 +85,56 @@
 .confirmed-card {
   text-align: center;
   justify-content: center;
+
+.review-container {
+  max-width: 1140px;
+  background-color: white;
+  padding: 20px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+.review {
+  background-color: white;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.cv-table {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: 363px;
+  border-radius: 5px;
+}
+
+.performer-description {
+  margin-top: 35px;
+}
+
+.performer-info-box {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 5px;
+  max-width: 740px;
+  min-height: 250px;
+
+  p {
+    font-size: 18px;
+      vertical-align: middle;
+  }
+}
+
+.performer-image {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
 }
