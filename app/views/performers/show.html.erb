@@ -1,16 +1,19 @@
 <div class="performers-container">
-  <br>
-  <h1 style="text-align: center; font-family: 'Montserrat'; font-size: 55px; padding-top: 50px;"> <%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
 
-  <h2 style="text-align: center; font-family: 'Montserrat';"><%= @performer.job_title %></h2>
-  <br>
+  <div class="banner-performers justify-content-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @performer.image_url %>);">>
+
+    <div class="performers-banner-contents">
+      <h1><%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
+      <h2><%= @performer.job_title %></h2>
+    </div>
+  </div>
 
   <div class="container">
-    <div class="row underline align-items-center">
+    <div class="row align-items-center performer-description">
       <div class="col-lg-4">
-        <img style="width: 100%; box-shadow: 3px 3px 3px lightgrey; border-radius: 5px;" src=" <%= @performer.image_url %> " />
+        <img src=" <%= @performer.avatar_url %> ", class="performer-image"/>
       </div>
-      <div class="col-lg-8">
+      <div class="col-lg-8 performer-info-box">
         <p><%= @performer.description %> </p>
         <br>
         <p><strong>£<%= @performer.hourly_rate %> per hour</strong></p>
@@ -102,28 +105,26 @@
       <br>
      </div>
   </div>
-  <br>
-  <h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
-  <div class="show_position">
-    <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
-  </div>
-  <br>
 
-  <div class="review-container">
+
     <% if @last_booking %>
+      <h2 style="text-align: center; font-family: 'Montserrat';">Reviews</h2>
+      <div class="review-container">
       <%= simple_form_for([ @last_booking, @review ], remote: true) do |f| %>
         <%= f.input :rating %>
         <%= f.input :title %>
         <%= f.input :description %>
         <%= f.submit "Add Review", class: "btn btn-dark" %>
       <% end %>
+      </div>
     <% end %>
-  </div>
+
 
   <br>
 
-  <div class="container">
+  <div class="review-list-container">
     <% if @performer.reviews.any? %>
+
       <% @performer.reviews.each do |review| %>
         <div class="review">
           <h3><%= review.title %></h3>
