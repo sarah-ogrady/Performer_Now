@@ -46,22 +46,6 @@
   padding-bottom: 10px;
 }
 
-.footer-homepage {
-  background-color: black;
-  height: 150px;
-  padding: 10px;
-}
-
-.footer-homepage h3 {
-  color: white;
-  text-align: center;
-}
-
-.footer-homepage p {
-  color: white;
-  text-align: center;
-}
-
 .three-icons {
   transition: top ease 0.3s;
   position: relative;
@@ -81,6 +65,10 @@
   color: white;
   padding: 10px;
   font-size: 30px;
+}
+
+.home-images {
+  margin-bottom: 20px;
 }
 
 // // Smallest device
