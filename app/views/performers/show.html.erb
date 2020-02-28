@@ -70,17 +70,18 @@
     </div>
     <div class="col-lg-4">
       <h2 style="text-align: center; font-family: 'Montserrat';">Book Now</h2>
-       <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
+       <%= simple_form_for [@performer, @booking], html: { class: 'form-class' }, remote: true do |f| %>
           <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
           <%= f.input :time, as: :time, html5: true %>
           <%= f.input :date, as: :date, html5: true, input_html: { value: Date.today } %>
           <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
             Total Price: £0
           </div>
-          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
+          <%= f.submit "Book", class: "submit-booking btn btn-dark", 'data-toggle' => 'modal', 'data-target' => '#exampleModal' %>
+          <!-- <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
             Book
           </button>
-
+ -->
 
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -89,15 +90,14 @@
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">Congratulations!</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true"></span>
                   </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="IDK">
                   <h2>Your booking is confirmed.</h2>
 <!--                   <h3><%#= "On #{@booking.date} from #{@booking.time.hour}:#{@booking.time.min} to #{@booking.time.hour + @booking.total_hours}:#{@booking.time.min}" %></h3>
  -->                </div>
                 <div class="modal-footer">
-                  <%= f.submit "My bookings", class: "submit-booking btn btn-dark", input_html: { data: { toggle: 'modal', target: '#exampleModal'}} %>
                 <% end %>
               </div>
             </div>
