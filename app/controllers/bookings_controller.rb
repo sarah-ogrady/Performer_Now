@@ -15,8 +15,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.total_price = @booking.total_hours * @performer.hourly_rate
     if @booking.save
-      render "confirmation", booking: @booking
-      # redirect_to confirmation_booking_path(@booking)
+        render "confirmation"
     else
       render :new
     end
