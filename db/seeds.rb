@@ -45,8 +45,8 @@ Performer.create(first_name: "Neil",
   image_url: "https://images.unsplash.com/photo-1486693128850-a77436e7ba3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
   avatar_url: "https://images.unsplash.com/photo-1528763380143-65b3ac89a3ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80",
   hourly_rate: "10",
-  description: "Neil started of as a Radio Presenter. After 5 years of doing this he decided to specialise in on screen acting, and from there he went into
-  corportate acting. Neil has been hired form all over the world to present business projects and to pitch start up companies. he's quite in demand so
+  description: "Neil started off as a Radio Presenter. After 5 years of doing this he decided to specialise in on screen acting, and from there he went into
+  corportate acting. Neil has been hired form all over the world to present business projects and to pitch start up companies. He's quite in demand so
   if there an avaliable date book it quick.")
 Performer.create(first_name: "Charles",
   last_name: "Walker",
@@ -71,7 +71,7 @@ Performer.create(first_name: "Jess",
   avatar_url: "https://images.unsplash.com/photo-1525735765456-7f67273a9d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
   hourly_rate: "10",
   description: "Jess is a multi talented singer who has sung all over the country. Her portfolio is massive and she can sing in many different styles.
-  if your looking for a Jazz singer she can do it, if your looking for a country and western singer she can do it.
+  If your're looking for a Jazz singer she can do it, if you're looking for a country and western singer she can do it.
   don't delay book today")
 Performer.create(first_name: "Mildred",
   last_name: "Smith",
@@ -79,7 +79,7 @@ Performer.create(first_name: "Mildred",
   image_url: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
   avatar_url: "https://images.unsplash.com/photo-1542200843-f8ee535b631f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80",
   hourly_rate: "40",
-  description: "Mildred has being playing the piano for 20 years and loves every second of it. She loves playing in concerts and as a solo artist.
+  description: "Mildred has been playing the piano for 20 years and loves every second of it. She loves playing in concerts and as a solo artist.
   book now.")
 Performer.create(first_name: "Emily",
   last_name: "Skelly",
@@ -96,14 +96,14 @@ Performer.create(first_name: "Lewis",
   avatar_url: "https://images.unsplash.com/photo-1542178243-bc20204b769f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
   hourly_rate: "15",
   description: "Having been a street performer all his life, Lewis has practised his crafted on the streets of London enetertaining crowds in many different sizes.
-  lewis is adaptable and is eager to perform.")
+  Lewis is adaptable and is eager to perform.")
 Performer.create(first_name: "Danni",
   last_name: "O'hara",
   job_title: "Pianist",
   image_url: "https://images.unsplash.com/photo-1552422535-c45813c61732?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
   avatar_url: "https://images.unsplash.com/photo-1535701121392-da2f8ef792f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
   hourly_rate: "40",
-  description: "Danni has being playing the piano for 20 years and loves every second of it. She loves playing in concerts and as a solo artist.
+  description: "Danni has been playing the piano for 20 years and loves every second of it. She loves playing in concerts and as a solo artist.
   book now.")
 Performer.create(first_name: "Cameron",
   last_name: "Mc'Roberts",
@@ -112,7 +112,7 @@ Performer.create(first_name: "Cameron",
   avatar_url: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
   hourly_rate: "25",
   description: "Cameron is a fantastic fire artist with years of practise. Not only has Cameron performed in the UK,
-  he has also performed in counties as far as China, italy and Russia. Cameron would be a perfect addition for any
+  he has also performed in countries as far as China, Italy and Russia. Cameron would be a perfect addition for any
   event. Skills include fire juggling, fire battons and fire ring. Don't delay book Cameron today.")
 Performer.create(first_name: "Jake",
   last_name: "Marshall",
@@ -128,7 +128,7 @@ Performer.create(first_name: "Sarah",
   image_url: "https://images.unsplash.com/photo-1577928923517-85da5f7e657f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80",
   avatar_url: "https://images.unsplash.com/photo-1543949806-2c9935e6aa78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
   hourly_rate: "30",
-  description: "Sarah has being playing the piano for 20 years and loves every second of it. She loves playing in concerts and as a solo artist.
+  description: "Sarah has been playing the piano for 20 years and loves every second of it. She loves playing in concerts and as a solo artist.
   book now.")
 Performer.create(first_name: "Conner",
   last_name: "Jones",
@@ -136,7 +136,7 @@ Performer.create(first_name: "Conner",
   image_url: "https://images.unsplash.com/photo-1488787973741-19520a61248a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
   avatar_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
   hourly_rate: "25",
-  description: "Conner Studied Music at Thames valley University, after achiving his degree and his Level 8 in vocals, he travelled all over the UK
+  description: "Conner Studied Music at Thames Valley University, after achiving his degree and his Level 8 in vocals, he travelled all over the UK
   singing at various differnt venues. after two years of this he specialised in Wedding Singing and developed an impressive portfolio.
   Conner is ready at the click of a button. Ask what songs you would like played and Conner will deliver. ")
 Performer.create(first_name: "Victor",
@@ -145,7 +145,7 @@ Performer.create(first_name: "Victor",
   image_url: "https://images.unsplash.com/photo-1547637351-7226db065492?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
   avatar_url: "https://images.unsplash.com/photo-1555943394-ab611ba0bba1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80",
   hourly_rate: "35",
-  description: "Victor is a Circus Performer and has worked for many touring circus companies. skills include juggling, unicycling, pois and tight rope walking.
+  description: "Victor is a Circus Performer and has worked for many touring circus companies. His skills include juggling, unicycling, pois and tight rope walking.
   Victor has his own equipment so when you book you get the whole package. An evenings enteratinment is just a click away.")
 Performer.create(first_name: "Ruth",
   last_name: "Edwards",
@@ -154,7 +154,7 @@ Performer.create(first_name: "Ruth",
   avatar_url: "https://images.unsplash.com/photo-1499358517822-d8578907a095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80",
   hourly_rate: "30",
   description: "Ruth is a multi talented singer who has sung all over the world. Her portfolio is massive and she can sing in many different styles.
-  If your looking for a Jazz singer she can do it, if your looking for a country and western singer she can do it.
+  If you're looking for a Jazz singer she can do it, if you're looking for a country and western singer she can do it.
   don't delay book today")
 Performer.create(first_name: "Tony",
   last_name: "Law",
@@ -162,8 +162,8 @@ Performer.create(first_name: "Tony",
   image_url: "https://images.unsplash.com/photo-1576544403918-c47d52572a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
   avatar_url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
   hourly_rate: "30",
-  description: "Tony is a Circus Performer and has worked for many touring circus companies. skills include juggling, unicycling, pois and tight rope walking.
-  Tony has his own equipment so when you book you get the whole package. An evenings enteratinment is just a click away.")
+  description: "Tony is a Circus Performer and has worked for many touring circus companies. His skills include juggling, unicycling, pois and tight rope walking.
+  Tony has his own equipment so when you book you get the whole package. An evening's enteratinment is just a click away.")
 Performer.create(first_name: "Zara",
   last_name: "Farmer",
   job_title: "Fire Performer",
@@ -171,7 +171,7 @@ Performer.create(first_name: "Zara",
   avatar_url: "https://images.unsplash.com/photo-1521252659862-eec69941b071?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=560&q=80",
   hourly_rate: "30",
   description: "Zara is a fantastic fire artist with years of practise. Not only has Zara performed in the UK,
-  she has also performed in counties as far as China, italy and Russia. Zara would be a perfect addition for any
+  she has also performed in countries as far as China, Italy and Russia. Zara would be a perfect addition for any
   event. Skills include fire juggling, fire battons and fire ring. Don't delay book Zara today.")
 
 puts "done"
