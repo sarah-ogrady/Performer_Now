@@ -29,7 +29,7 @@ Performer.create(first_name: "Kate",
   hourly_rate: "15",
   description: "Kate Studied Music at the University of York, after achiving her degree and her Level 8 in vocals, she travelled all over the UK
   singing at various differnt venues. after two years of this she specialised in Wedding Singing and developed an impressive portfolio.
-  Kate is ready a the click of a button. Ask what songs you would like played and kate will deliver. ")
+  Kate is ready at the click of a button. Ask what songs you would like played and kate will deliver. ")
 Performer.create(first_name: "Zac",
   last_name: "Price",
   job_title: "Actor",
@@ -105,6 +105,73 @@ Performer.create(first_name: "Danni",
   hourly_rate: "40",
   description: "Danni has being playing the piano for 20 years and loves every second of it. She loves playing in concerts and as a solo artist.
   book now.")
-
+Performer.create(first_name: "Cameron",
+  last_name: "Mc'Roberts",
+  job_title: "Fire Performer",
+  image_url: "https://images.unsplash.com/photo-1515167866425-3793fe5f6e50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",
+  avatar_url: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
+  hourly_rate: "25",
+  description: "Cameron is a fantastic fire artist with years of practise. Not only has Cameron performed in the UK,
+  he has also performed in counties as far as China, italy and Russia. Cameron would be a perfect addition for any
+  event. Skills include fire juggling, fire battons and fire ring. Don't delay book Cameron today.")
+Performer.create(first_name: "Jake",
+  last_name: "Marshall",
+  job_title: "Circus Performer",
+  image_url: "https://images.unsplash.com/photo-1562709315-7f4ab3105b73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80",
+  avatar_url: "https://images.unsplash.com/photo-1579983926774-399a9cb765c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  hourly_rate: "19",
+  description: "Jake is a Circus Performer and has worked for many touring circus companies. skills include juggling, unicycling, pois and tight rope walking.
+  Jake has his own equipment so when you book you get the whole package. An evenings enteratinment is just a click away.")
+Performer.create(first_name: "Sarah",
+  last_name: "O'grady",
+  job_title: "Pianist",
+  image_url: "https://images.unsplash.com/photo-1577928923517-85da5f7e657f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80",
+  avatar_url: "https://images.unsplash.com/photo-1543949806-2c9935e6aa78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+  hourly_rate: "30",
+  description: "Sarah has being playing the piano for 20 years and loves every second of it. She loves playing in concerts and as a solo artist.
+  book now.")
+Performer.create(first_name: "Conner",
+  last_name: "Jones",
+  job_title: "Wedding Singer",
+  image_url: "https://images.unsplash.com/photo-1439539698758-ba2680ecadb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  avatar_url: "https://images.unsplash.com/photo-1535324492437-d8dea70a38a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80",
+  hourly_rate: "25",
+  description: "Conner Studied Music at Thames valley University, after achiving his degree and his Level 8 in vocals, he travelled all over the UK
+  singing at various differnt venues. after two years of this he specialised in Wedding Singing and developed an impressive portfolio.
+  Conner is ready at the click of a button. Ask what songs you would like played and Conner will deliver. ")
+Performer.create(first_name: "Victor",
+  last_name: "Hugo",
+  job_title: "Circus Performer",
+  image_url: "https://images.unsplash.com/photo-1547637351-7226db065492?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  avatar_url: "https://images.unsplash.com/photo-1555943394-ab611ba0bba1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80",
+  hourly_rate: "35",
+  description: "Victor is a Circus Performer and has worked for many touring circus companies. skills include juggling, unicycling, pois and tight rope walking.
+  Victor has his own equipment so when you book you get the whole package. An evenings enteratinment is just a click away.")
+Performer.create(first_name: "Ruth",
+  last_name: "Edwards",
+  job_title: "Singer",
+  image_url: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  avatar_url: "https://images.unsplash.com/photo-1499358517822-d8578907a095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80",
+  hourly_rate: "30",
+  description: "Ruth is a multi talented singer who has sung all over the world. Her portfolio is massive and she can sing in many different styles.
+  If your looking for a Jazz singer she can do it, if your looking for a country and western singer she can do it.
+  don't delay book today")
+Performer.create(first_name: "Tony",
+  last_name: "Law",
+  job_title: "Circus Performer",
+  image_url: "https://images.unsplash.com/photo-1576544403918-c47d52572a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80",
+  avatar_url: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+  hourly_rate: "30",
+  description: "Tony is a Circus Performer and has worked for many touring circus companies. skills include juggling, unicycling, pois and tight rope walking.
+  Tony has his own equipment so when you book you get the whole package. An evenings enteratinment is just a click away.")
+Performer.create(first_name: "Zara",
+  last_name: "Farmer",
+  job_title: "Fire Performer",
+  image_url: "https://images.unsplash.com/photo-1547423753-bff7561e2956?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  avatar_url: "https://images.unsplash.com/photo-1521252659862-eec69941b071?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=560&q=80",
+  hourly_rate: "30",
+  description: "Zara is a fantastic fire artist with years of practise. Not only has Zara performed in the UK,
+  she has also performed in counties as far as China, italy and Russia. Zara would be a perfect addition for any
+  event. Skills include fire juggling, fire battons and fire ring. Don't delay book Zara today.")
 
 puts "done"
