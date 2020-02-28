@@ -1,93 +1,88 @@
-<br>
-<h1 style="text-align: center; font-family: 'Montserrat'; font-size: 55px; padding-top: 50px;"> <%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
-
-<h2 style="text-align: center; font-family: 'Montserrat';"><%= @performer.job_title %></h2>
-<br>
-
-<div class="container">
-  <div class="row underline align-items-center">
-    <div class="col-lg-4">
-      <img style="width: 100%; box-shadow: 3px 3px 3px lightgrey; border-radius: 5px;" src=" <%= @performer.image_url %> " />
-    </div>
-    <div class="col-lg-8">
-      <p><%= @performer.description %> </p>
-      <br>
-      <p><strong>£<%= @performer.hourly_rate %> per hour</strong></p>
-    </div>
-  </div>
-</div>
-
-<br>
-
-<div class="container underline">
-  <div class="row">
-    <div class="col-lg-8">
-      <h2 style="text-align: center; font-family: 'Montserrat';">CV</h2>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Type of Job</th>
-            <th scope="col">role</th>
-            <th scope="col">event</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Theatre Tour</td>
-            <td>Actor</td>
-            <td>Outdoor Festival</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Wedding Singer</td>
-            <td>Singer</td>
-            <td>Wedding</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Theatre</td>
-            <td>Actor</td>
-            <td>Christmas Pantomine</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Theatre</td>
-            <td>Actor</td>
-            <td>Summer Show</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>OutDoor Theatre</td>
-            <td>Actor</td>
-            <td>Circus Show</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-lg-4">
-      <h2 style="text-align: center; font-family: 'Montserrat';">Book Now</h2>
-       <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
-          <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
-          <%= f.input :time, as: :time, html5: true %>
-          <%= f.input :date, as: :date, html5: true, input_html: { value: Date.today } %>
-          <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
-            Total Price: £0
-          </div>
-          <%= f.submit class: "submit-booking btn btn-dark" %>
-       <% end %>
-       <br>
-     </div>
-  </div>
-</div>
+<div class="performers-container">
   <br>
-    <h2 style="text-align: center; font-family: 'Montserrat'; font-size: 60px;"><%= @performer.first_name %> Headshot</h2>
-    <div class="show_position">
-      <img src=" <%= @performer.avatar_url %> " class="show_avatar" />
+  <h1 style="text-align: center; font-family: 'Montserrat'; font-size: 55px; padding-top: 50px;"> <%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
+
+  <h2 style="text-align: center; font-family: 'Montserrat';"><%= @performer.job_title %></h2>
+  <br>
+
+  <div class="container">
+    <div class="row underline align-items-center">
+      <div class="col-lg-4">
+        <img style="width: 100%; box-shadow: 3px 3px 3px lightgrey; border-radius: 5px;" src=" <%= @performer.image_url %> " />
+      </div>
+      <div class="col-lg-8">
+        <p><%= @performer.description %> </p>
+        <br>
+        <p><strong>£<%= @performer.hourly_rate %> per hour</strong></p>
+      </div>
     </div>
+  </div>
+
+  <br>
+
+  <div class="container underline">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 style="text-align: center; font-family: 'Montserrat';">CV</h2>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Type of Job</th>
+              <th scope="col">role</th>
+              <th scope="col">event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Theatre Tour</td>
+              <td>Actor</td>
+              <td>Outdoor Festival</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Wedding Singer</td>
+              <td>Singer</td>
+              <td>Wedding</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Theatre</td>
+              <td>Actor</td>
+              <td>Christmas Pantomine</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Theatre</td>
+              <td>Actor</td>
+              <td>Summer Show</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>OutDoor Theatre</td>
+              <td>Actor</td>
+              <td>Circus Show</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-4">
+        <h2 style="text-align: center; font-family: 'Montserrat';">Book Now</h2>
+         <%= simple_form_for [@performer, @booking], html: { class: 'form-class' } do |f| %>
+            <%= f.input :total_hours, input_html: { class: 'my-new-class' }, label_html: { class: 'label-class' }, wrapper_html: { class: 'wrapper-class' } %>
+            <%= f.input :time, as: :time, html5: true %>
+            <%= f.input :date, as: :date, html5: true, input_html: { value: Date.today } %>
+            <div data-rate="<%= @performer.hourly_rate %>" class="price-target">
+              Total Price: £0
+            </div>
+            <%= f.submit class: "submit-booking btn btn-dark" %>
+         <% end %>
+         <br>
+       </div>
+    </div>
+  </div>
     <br>
-    <p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 
 <div class="container">
   <% if @last_booking %>
@@ -99,6 +94,9 @@
     <% end %>
   <% end %>
 </div>
+
+<br>
+<p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 
 <div class="container">
   <% if @performer.reviews.any? %>
