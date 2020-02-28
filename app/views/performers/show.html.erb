@@ -1,73 +1,73 @@
-<br>
-<h1 style="text-align: center; font-family: 'Montserrat'; font-size: 55px; padding-top: 50px;"> <%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
+<div class="performers-container">
+  <br>
+  <h1 style="text-align: center; font-family: 'Montserrat'; font-size: 55px; padding-top: 50px;"> <%= "#{@performer.first_name} #{@performer.last_name}" %></h1>
 
-<h2 style="text-align: center; font-family: 'Montserrat';"><%= @performer.job_title %></h2>
-<br>
+  <h2 style="text-align: center; font-family: 'Montserrat';"><%= @performer.job_title %></h2>
+  <br>
 
-<div class="container">
-  <div class="row underline align-items-center">
-    <div class="col-lg-4">
-      <img style="width: 100%; box-shadow: 3px 3px 3px lightgrey; border-radius: 5px;" src=" <%= @performer.image_url %> " />
-    </div>
-    <div class="col-lg-8">
-      <p><strong><%= @performer.first_name %></strong> is a first rate performer who has many years of experience. This performer has performed all over the
-      the world with many different and exciting shows. At the click of a button they could be at your event entertaining the
-      masses. Please book now, don't delay, get the right performer for your event. </p>
-      <br>
-      <p><strong>£<%= @performer.hourly_rate %> per hour</strong></p>
+  <div class="container">
+    <div class="row underline align-items-center">
+      <div class="col-lg-4">
+        <img style="width: 100%; box-shadow: 3px 3px 3px lightgrey; border-radius: 5px;" src=" <%= @performer.image_url %> " />
+      </div>
+      <div class="col-lg-8">
+        <p><%= @performer.description %> </p>
+        <br>
+        <p><strong>£<%= @performer.hourly_rate %> per hour</strong></p>
+      </div>
     </div>
   </div>
-</div>
 
-<br>
+  <br>
 
-<div class="container underline">
-  <div class="row">
-    <div class="col-lg-8">
-      <h2 style="text-align: center; font-family: 'Montserrat';">CV</h2>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Type of Job</th>
-            <th scope="col">role</th>
-            <th scope="col">event</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Theatre Tour</td>
-            <td>Actor</td>
-            <td>Outdoor Festival</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Wedding Singer</td>
-            <td>Singer</td>
-            <td>Wedding</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Theatre</td>
-            <td>Actor</td>
-            <td>Christmas Pantomine</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Theatre</td>
-            <td>Actor</td>
-            <td>Summer Show</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>OutDoor Theatre</td>
-            <td>Actor</td>
-            <td>Circus Show</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="container underline">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 style="text-align: center; font-family: 'Montserrat';">CV</h2>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Type of Job</th>
+              <th scope="col">role</th>
+              <th scope="col">event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Theatre Tour</td>
+              <td>Actor</td>
+              <td>Outdoor Festival</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Wedding Singer</td>
+              <td>Singer</td>
+              <td>Wedding</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Theatre</td>
+              <td>Actor</td>
+              <td>Christmas Pantomine</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Theatre</td>
+              <td>Actor</td>
+              <td>Summer Show</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>OutDoor Theatre</td>
+              <td>Actor</td>
+              <td>Circus Show</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     <div class="col-lg-4">
       <h2 style="text-align: center; font-family: 'Montserrat';">Book Now</h2>
        <%= simple_form_for [@performer, @booking], html: { class: 'form-class' }, remote: true do |f| %>
@@ -115,9 +115,28 @@
 <br>
 <p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 
+<div class="container">
+  <% if @last_booking %>
+    <%= simple_form_for([ @last_booking, @review ], remote: true) do |f| %>
+      <%= f.input :rating %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.button :submit %>
+    <% end %>
+  <% end %>
+</div>
 
+<br>
+<p style="text-align: center;"><%= link_to "View More Performers", performers_path, class: "btn btn-dark" %></p>
 
-
-
-
-
+<div class="container">
+  <% if @performer.reviews.any? %>
+    <% @performer.reviews.each do |review| %>
+      <h3><%= review.title %></h3>
+      <h4><%= review.rating %></h4>
+      <p><%= review.description %></p>
+    <% end %>
+  <% elsif @last_booking %>
+    Be the first to leave a review for <%= @performer.first_name %>
+  <% end %>
+</div>

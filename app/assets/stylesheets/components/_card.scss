@@ -4,6 +4,9 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-decoration: none;
   font-family: "Montserrat" !important;
+  transition: top ease 0.4s;
+  position: relative;
+  top: 0;
 }
 
 .card-links {
@@ -16,11 +19,11 @@
 }
 
 .card-performer:hover {
-  transform: scale(1.05, 1.05);
-  transition: 0.5s;
-  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
+  transition: 0.4s;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  top: -4px;
 }
+
 
 .card-performer > img {
   height: 200px;
@@ -65,4 +68,18 @@
   width: 40px;
   object-fit: cover;
   object-position: 50% 20%;
+}
+
+.booking-card {
+  margin: 250px 120px;
+  text-align: center;
+  padding: 50px 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px grey;
+  background: #E0E2DB;
+}
+
+.cards {
+  margin-bottom: 35px;
 }
