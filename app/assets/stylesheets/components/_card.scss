@@ -4,7 +4,9 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-decoration: none;
   font-family: "Montserrat" !important;
-  transition: 0.4s;
+  transition: top ease 0.4s;
+  position: relative;
+  top: 0;
 }
 
 .card-links {
@@ -17,9 +19,9 @@
 }
 
 .card-performer:hover {
-  transform: scale(1.02, 1.02);
   transition: 0.4s;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  top: -4px;
 }
 
 
