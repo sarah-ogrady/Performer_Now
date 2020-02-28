@@ -10,19 +10,7 @@
   </head>
 
   <body>
-    <% if controller_name == "pages" && action_name == "home" %>
-      <%= render partial: "shared/navbar_white" %>
-    <% elsif controller_name == "performers" && action_name == "index" %>
-      <%= render partial: "shared/navbar_white" %>
-    <% elsif controller_name == "registrations" && action_name == "new" %>
-      <%= render partial: "shared/navbar_white" %>
-    <% elsif controller_name == "sessions" && action_name == "new" %>
-      <%= render partial: "shared/navbar_white" %>
-    <% elsif controller_name == "bookings" && action_name == "index" %>
-      <%= render partial: "shared/navbar_white" %>
-    <% else %>
-      <%= render partial: "shared/navbar_black" %>
-    <% end %>
+    <%= render 'shared/navbar' %>
     <div style="min-height: 100vh">
       <%= yield %>
       <div class="footer">
